@@ -1,0 +1,284 @@
+::selection {
+    color: $white;
+    background: $primary-800;
+}
+
+html {
+    body {
+        font-family: $fontPrimary !important;
+        background-color: $gray-50 !important;
+        width: 100%;
+        height: 100%;
+        @include scrollbar;
+    }
+    &.dark {
+        body {
+            background-color: #121212 !important;
+            color: $white;
+        }
+    }
+}
+
+
+@for $i from 9 through 30 {
+    .fs-#{$i} {
+      font-size: $i+px;
+    }
+}
+
+@for $i from 5 through 50 {
+    .rounded-#{$i} {
+      border-radius: $i+px !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .border-#{$i} {
+      border: $i+px solid !important;
+    }
+    .border-top-#{$i} {
+      border-top: $i+px solid !important;
+    }
+    .border-bottom-#{$i} {
+      border-bottom: $i+px solid !important;
+    }
+    .border-left-#{$i} {
+      border-left: $i+px solid !important;
+    }
+    .border-right-#{$i} {
+      border-right: $i+px solid !important;
+    }
+}
+
+@each $key, $primary in $primaries {
+    .bg-primary-#{$key} {
+        background-color: $primary !important;
+    }
+    .text-primary-#{$key} {
+        color: $primary !important;
+    }
+}
+
+@each $key, $success in $successes {
+    .bg-success-#{$key} {
+        background-color: $success !important;
+    }
+    .text-success-#{$key} {
+        color: $success !important;
+    }
+}
+
+@each $key, $info in $infos {
+    .bg-info-#{$key} {
+        background-color: $info !important;
+    }
+    .text-info-#{$key} {
+        color: $info !important;
+    }
+}
+
+@each $key, $warning in $warnings {
+    .bg-warning-#{$key} {
+        background-color: $warning;
+    }
+    .text-warning-#{$key} {
+        color: $warning;
+    }
+}
+
+@each $key, $gray in $grays {
+    .bg-gray-#{$key} {
+        background-color: $gray;
+    }
+    .text-gray-#{$key} {
+        color: $gray;
+    }
+    .border-gray-#{$key} {
+        border-color: $gray !important;
+    }
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+$font-sizes: (
+    1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size,
+);
+
+$utilities: (
+    "font-family": (
+        property: font-family,
+        class: font,
+        values: (
+            primary: $fontPrimary,
+            secondary: $fontSecondary,
+        ),
+    ),
+    "font-size": (
+        rfs: true,
+        property: font-size,
+        class: fs,
+        values: $font-sizes,
+    ),
+    "font-style": (
+        property: font-style,
+        class: fst,
+        values: italic normal,
+    ),
+    "font-weight": (
+        property: font-weight,
+        class: fw,
+        values: (
+            light: $font-weight-light,
+            lighter: $font-weight-lighter,
+            normal: $font-weight-normal,
+            medium: $font-weight-medium,
+            bold: $font-weight-bold,
+            bolder: $font-weight-bolder,
+        ),
+    ),
+    "line-height": (
+        property: line-height,
+        class: lh,
+        values: (
+            1: 1,
+            sm: $line-height-sm,
+            base: $line-height-base,
+            lg: $line-height-lg,
+        ),
+    ),
+    "text-align": (
+        responsive: true,
+        property: text-align,
+        class: text,
+        values: (
+            start: left,
+            end: right,
+            center: center,
+        ),
+    ),
+    "text-decoration": (
+        property: text-decoration,
+        values: none underline line-through,
+    ),
+    "text-transform": (
+        property: text-transform,
+        class: text,
+        values: lowercase uppercase capitalize,
+    ),
+    "white-space": (
+        property: white-space,
+        class: text,
+        values: (
+            wrap: normal,
+            nowrap: nowrap,
+        ),
+    ),
+    "word-wrap": (
+        property: word-wrap word-break,
+        class: text,
+        values: (
+            break: break-word,
+        ),
+        rtl: false,
+    ),
+    "shadow": (
+        property: box-shadow,
+        class: shadow,
+        values: (
+            null: $box-shadow,
+            sm: $box-shadow-sm,
+            lg: $box-shadow-lg,
+            primary: $box-shadow-primary,
+            none: none,
+        ),
+    ),
+);
+
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}
+}
+
+.btn-circle {
+    padding: 8px 36px !important;
+    border-radius: 24px !important;
+}
+
+.shadow-primary {
+    background: #D9D9D9;
+    box-shadow: 0px 10px 20px rgba(243, 131, 4, 0.2);
+}
+:is(.form-control, .form-select) {
+    &:focus {
+        background-color: #fff;
+        border-color: $primary-700 !important;
+        outline: 0;
+        box-shadow: 0 0 0 0 !important;
+    }
+}
+.btn-check,
+.btn {
+    &:focus,
+    &:focus-visible {
+        outline: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+.form-check-input {
+    border-color: #757575 !important;
+    &:focus {
+        box-shadow: 0 0 0 0 $primary-100 !important;
+    }
+    &:checked {
+        background-color: $primary-800 !important;
+        border-color: $primary-800 !important;
+    }
+}
+a {
+    text-decoration: none !important;
+}
+.section {
+    padding: 10px 0;
+}
+.title {
+    color: $primary-800;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.primary-btn{
+    color: #ffffff !important;
+    background-color: #ED7402 !important;
+    border-color: #ED7402 !important;
+}
+
+// a {
+//     &:hover {
+//         color: $primary-800 !important;
+//     }
+// }
+
+.disabled {
+    pointer-events: none;
+}
+
+#table_wrapper {
+    padding: 20px;
+}
+.clockpicker-popover {
+    position: absolute;
+}

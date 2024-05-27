@@ -1,0 +1,78 @@
+.select2.select2-container {
+    width: 100% !important;
+    .selection {
+        .select2-selection--single {
+            height: 40px;
+            background: $white;
+            border: 1px solid #D9D9D9;
+            border-radius: 0.25rem;
+            .select2-selection__rendered {
+                line-height: 40px;
+                font-size: 16px;
+                font-family: $fontSecondary;
+                font-weight: $font-weight-bold;
+                padding-left: 16px;
+            }
+            .select2-selection__arrow {
+                top: 8px;
+                right: 5px;
+            }
+        }
+        .select2-selection--multiple {
+            height: 40px;
+            background: $white;
+            border: 1px solid #D9D9D9;
+            border-radius: 0.25rem;
+        }
+    }
+}
+
+.select2-dropdown {
+    border-color: #D9D9D9 !important;
+    z-index: 1055;
+
+    .select2-search__field {
+        &:focus-visible {
+            outline: none;
+        }
+    }
+    .select2-results {
+        .select2-results__option--highlighted {
+            background-color: $primary-800 !important;
+        }
+    }
+}
+
+html.dark {
+    .select2 {
+        .selection {
+            .select2-selection--single {
+                background: $gray-700;
+                border-color: $gray-600;
+
+                .select2-selection__rendered {
+                    color: $white;
+                }
+            }
+        }
+    }
+    
+    .select2-dropdown {
+        background-color: #626262;
+        border-color: $gray-700 !important;
+        box-shadow: $box-shadow-sm;
+        .select2-search__field {
+            background-color: $gray-800;
+            border-color: $gray-800;
+            color: $white;
+        }
+        .select2-results {
+            .select2-results__option--highlighted {
+                background-color: $primary-800 !important;
+            }
+            .select2-results__option--selected {
+                background-color: $gray-800 !important;
+            }
+        }
+    }
+}

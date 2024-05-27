@@ -1,0 +1,218 @@
+.kitchen-card {
+    font-family: $fontSecondary;
+    font-weight: $font-weight-bold;
+    background: $white;
+    box-shadow: $box-shadow-sm;
+    border-radius: 20px;
+    font-size: 16px;
+
+    .kitchen-card-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        background: $primary-800;
+        border-radius: 10px 10px 0px 0px;
+        color: $white;
+    }
+    .kitchen-card-body {
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-height: 325px;
+        min-height: 320px;
+        @include scrollbar;
+
+        .kitchen-order-item {
+            padding: 16px;
+            color: $gray-700;
+            border-bottom: 1px solid $gray-100;
+            cursor: pointer;
+
+            .order-item-details {
+                display: flex;
+                flex-direction: column;
+                padding: 0px;
+
+                .item-quantity {
+                    margin-bottom: 0;
+                    font-weight: $font-weight-medium;
+                    font-size: 12px;
+                }
+                .addon {
+                    display: inline-block;
+                    padding: 2px 12px;
+                    background: $primary-50;
+                    border-radius: 10px;
+                    font-size: 12px;
+                    text-align: center;
+                    .name {
+                        color: $primary-500;
+
+                    }
+                }
+            }
+            .order-item-status {
+                padding: 4px 12px;
+                background: $warning-50;
+                color: $warning-500;
+                border-radius: 24px;
+                font-size: 14px;
+                text-transform: capitalize;
+            }
+            &.order-cooking {
+                background-color: $info-50;
+                .order-item-status {
+                    background: $white;
+                    color: $info-800;
+                }
+            }
+            &.order-ready {
+                background-color: $success-50;
+                .order-item-status {
+                    background: $white;
+                    color: $success-800;
+                }
+            }
+            &.order-served {
+                background-color: $success-100;
+                .order-item-status {
+                    background: $white;
+                    color: $success-300;
+                }
+            }
+        }
+    }
+    .kitchen-card-footer {
+        padding: 16px;
+        text-align: center;
+        .btn {
+            padding: 4px 12px;
+            border: 1px solid $gray-200;
+            border-radius: 24px;
+            font-weight: $font-weight-medium;
+            font-size: 12px;
+            text-transform: capitalize;
+            &:not(:first-child) {
+                margin-left: 5px;
+            }
+            &.cooking-btn {
+                background-color: $info-50;
+                border-color: $info-50;
+            }
+            &.ready-btn {
+                background-color: $success-50;
+                border-color: $success-50;
+            }
+            &.served-btn {
+                background-color: $primary-800;
+                border-color: $primary-800;
+                color: $white;
+            }
+        }
+    }
+}
+
+
+.kitchen-loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0000008c;
+}
+@keyframes ldio-2shmzovtr6v {
+    0% {
+        background: #808080;
+    }
+    12.5% {
+        background: #808080;
+    }
+    12.625% {
+        background: #ed7402;
+    }
+    100% {
+        background: #ed7402;
+    }
+}
+.ldio-2shmzovtr6v div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #ed7402;
+    animation: ldio-2shmzovtr6v 1s linear infinite;
+}
+.loadingio-spinner-blocks-c9l6kjiweq {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+}
+.ldio-2shmzovtr6v {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+}
+.ldio-2shmzovtr6v div {
+    box-sizing: content-box;
+}
+
+// Dark classes
+.dark {
+    .kitchen-card {
+        background: $gray-800;
+        .kitchen-card-body {
+
+            .kitchen-order-item {
+                background-color: $gray-800;
+                border-color: $gray-600;
+                color: $white;
+                .order-item-details {
+                    .addon {
+                        background: $gray-700;
+                        .name {
+                            color: $primary-800;
+                        }
+                    }
+                }
+                .order-item-status {
+                    background: $warning-800;
+                    color: $white;
+                }
+                &.order-cooking {
+                    background-color: $gray-800;
+                    .order-item-status {
+                        background: $info-800;
+                    }
+                }
+
+                &.order-ready {
+                    background-color: $gray-800;
+                    .order-item-status {
+                        background: $success-800;
+                    }
+                }
+
+            }
+        }
+        .kitchen-card-footer {
+            .btn {
+                &.cooking-btn {
+                    border-color: $primary-800;
+                    color: $primary-800;
+                }
+                &.ready-btn {
+                    background-color: $primary-800;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

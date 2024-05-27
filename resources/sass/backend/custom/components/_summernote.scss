@@ -1,0 +1,75 @@
+.note-modal-footer {
+    height: 50px;
+    padding: 4px 5px;
+    .note-link-btn {
+        color: $white;
+    }
+}
+
+.dark {
+    .note-editor {
+        &.note-frame {
+            background-color: $gray-700;
+            border-color: $gray-600;
+            color: $white;
+        }
+
+        .note-toolbar {
+            background-color: $gray-800;
+            border-color: $gray-500;
+
+            .note-btn {
+                background-color: $gray-700;
+                border-color: $gray-600;
+                color: $white;
+            }
+            .note-dropdown-menu {
+                background-color: $gray-700;
+                border-color: $gray-600;
+                .note-dropdown-item {
+                    color: $white;
+
+                    &:hover {
+                        background-color: $gray-800;
+                    }
+                }
+            }
+        }
+        .note-modal-content {
+            background-color: $gray-700;
+            color: $white;
+            .note-modal-header {
+                border: none;
+                .close {
+                    color: $white;
+                }
+                .note-modal-title {
+                    color: $white;
+                }
+            }
+            .note-modal-body {
+                padding: 10px 20px;
+                .note-form-group {
+                    label {
+                        color: $white;
+                        padding: 2px 0;
+                    }
+                }
+                .checkbox {
+                    input[type="checkbox"] {
+                        background-color: #757575 !important;
+                        border-color: #757575 !important;
+                        margin-right: 5px;
+                        &:focus {
+                            box-shadow: 0 0 0 0 $primary-100 !important;
+                        }
+                        &:checked {
+                            background-color: $primary-800 !important;
+                            border-color: $primary-800 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

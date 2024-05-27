@@ -1,0 +1,31 @@
+.swal2-popup { 
+    .swal2-actions {
+        .swal2-styled {
+            color: $dark !important;
+            &.swal2-confirm {
+                background-color: $primary-800 !important;
+                border-color: $primary-800 !important;
+                color: $white !important;
+            }
+        }
+    }
+}
+
+.dark {
+    .swal2-popup { 
+        background-color: $gray-700 !important;
+        .swal2-title {
+            color: $white !important;
+        }
+        .swal2-actions {
+            .swal2-styled {
+                color: $dark !important;
+                &.swal2-cancel {
+                    background-color: $gray-600 !important;
+                    border-color: $gray-600 !important;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}

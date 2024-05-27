@@ -1,0 +1,67 @@
+
+@include media-breakpoint-up(sm) {
+    .dashboard-cards-area {
+        grid-template-columns: auto auto auto !important;
+        &.stand-mode {
+            grid-template-columns: auto auto auto !important;
+        } 
+    }
+}
+@include media-breakpoint-up(md) {
+    .dashboard-cards-area {
+        grid-template-columns: auto auto auto auto !important;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .dashboard-cards-area.not-stand {
+        grid-template-columns: auto auto auto auto auto !important;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .cart-area {
+        margin-top: -65px !important;
+    }
+    .dashboard-cards-area {
+        &.not-stand {
+            grid-template-columns: auto auto auto auto auto auto !important;
+        }
+        &.stand-mode {
+            grid-template-columns: auto auto auto;
+            gap: 30px 10px;
+            .dashboard-rounder-card {
+                width: 250px;
+                height: 250px;
+                img {
+                    margin-top: 90px;
+                }
+            }
+        }
+    }
+    .cart-card {
+        .cart-heading-item {
+            padding: 5px 15px !important;
+        }
+        .add-to-cart {
+            .cart-items {
+                td {
+                    input.item-qty {
+                        width: 20px;
+                    }
+                    button.increase-btn {
+                        width: 20px;
+                        height: 20px;
+                        line-height: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    .dashboard-cards-area.not-stand {
+        grid-template-columns: auto auto auto auto auto auto auto !important;
+    }
+}

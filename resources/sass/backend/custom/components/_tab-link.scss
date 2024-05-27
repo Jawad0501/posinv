@@ -1,0 +1,19 @@
+.tab-link {
+    display: block;
+    padding: 8px 16px;
+    border-bottom: 1px solid #dfdfdf;
+    color: #333;
+    transition: colors 0.5s ease-in-out;
+    -webkit-transition: colors 0.5s ease-in-out;
+    -moz-transition: colors 0.5s ease-in-out;
+    -ms-transition: colors 0.5s ease-in-out;
+    -o-transition: colors 0.5s ease-in-out;
+    &.active,
+    &:hover {
+        background-color: $primary-500;
+        color: $white;
+    }
+    &:last-child {
+        border-bottom: none;
+    }
+}

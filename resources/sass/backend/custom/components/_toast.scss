@@ -1,0 +1,11 @@
+#toast-container {
+    .toast-success {            
+        background-color: $success-800;
+    }
+    .toast-error {            
+        background-color: $warning-800;
+    }
+    .toast-warning {            
+        background-color: $info-800;
+    }
+}

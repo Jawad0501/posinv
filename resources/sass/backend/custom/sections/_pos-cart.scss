@@ -1,0 +1,319 @@
+.cart-card {
+    background-color: $white;
+    border: none !important;
+
+    .card-heading {
+        margin-top: 5px;
+        .nav-pills {
+            .nav-item {
+                &:not(:first-child) {
+                    margin-left: 18px;
+                }
+                .tab-btn {
+                    text-decoration: none;
+                    .tab-image {
+                        width: 30px !important;
+                        height: 30px !important;
+                        background-color: $primary-50;
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        margin: auto;
+                        svg {
+                            path {
+                                fill: $primary-800;
+                            }
+                        }
+                    }
+                    p {
+                        font-family: $fontSecondary;
+                        font-weight: $font-weight-medium;
+                        font-size: 12px;
+                        color: $black;
+                        margin-top: 3px;
+                        margin-bottom: 0;
+                    }
+                    &.active {
+                        .tab-image {
+                            background-color: $primary-800;
+                            svg {
+                                path {
+                                    fill: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .card-body {
+        .customer-selection {
+            background-color: $gray-50;
+            padding: 16px;
+            .add-edit-btn {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                a.btn {
+                    background: $white;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    &:not(:first-child) {
+                        margin-left: 10px;
+                    }
+                    i {
+                        color: $gray-600;
+                    }
+                }
+            }
+        }
+
+        .table-view {
+            // max-height: 400px;
+            height: 300px;
+            padding-right: 5px;
+            position: relative;
+            // overflow-x: hidden;
+            // overflow-y: auto;
+
+            @include scrollbar;
+
+            table.table {
+                border-color: $gray-100;
+                .qty-btn {
+                    background: transparent;
+                    border: 1px solid rgba(221, 221, 221, 0.3803921569);
+                    font-size: 12px;
+                    color: #9c9c9c;
+                    transition-duration: 0.3s;
+                    cursor: pointer;
+                    width: 25px;
+                    height: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .qty-input {
+                    width: 25px;
+                    height: 25px;
+                    border: 1px solid #dddddd61;
+                    border-left: none;
+                    border-right: none;
+                    text-align: center;
+
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .cart-subtotal {
+            background-color: $gray-50;
+            margin-top: 10px;
+        }
+
+        .cart-place-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $gray-50;
+            border: 1px solid $gray-300;
+            border-radius: 10px;
+            padding: 20px 0;
+            color: #121212;
+            margin-bottom: 8px;
+            cursor: pointer;
+
+            &.active {
+                background: $primary-800;
+                border: 1px solid $primary-800;
+                color: $white;
+            }
+            i {
+                font-size: 16px;
+            }
+            p {
+                margin-bottom: 0;
+                font-family: $fontSecondary;
+                font-weight: $font-weight-medium;
+                font-size: 15px;
+                margin-left: 7px;
+            }
+        }
+    }
+}
+
+.misc-item {
+    background: #FFFFFF;
+    border: 1px solid $gray-300;
+    border-radius: 10px;
+    padding: 3px 12px;
+    color: $primary-800;
+    font-size: 12px;
+    font-weight: $font-weight-medium;
+    font-family: $fontSecondary;
+    &:not(:first-child) {
+        margin-left: 8px;
+    }
+    span {
+        color: $gray-600;
+        margin-left: 8px;
+    }
+}
+
+// Dark classes
+.dark {
+    .pos-cart-wrapper {
+        background: $gray-800;
+    }
+    .qty-btn,
+    .qty-input {
+        background: $gray-700;
+        border-color: $gray-600;
+        color: $white;
+    }
+    .cart-card {
+        background-color: $gray-800;
+
+        .card-heading {
+            .nav-pills {
+                .nav-item {
+                    .tab-btn {
+                        .tab-image {
+                            background-color: $gray-700;
+                            svg {
+                                path {
+                                    fill: $white;
+                                }
+                            }
+                        }
+                        p {
+                            color: $white;
+                        }
+                        &.active {
+                            .tab-image {
+                                background-color: $primary-800;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            .customer-selection {
+                background-color: $gray-700;
+                .add-edit-btn {
+                    a.btn {
+                        background: $gray-600;
+                        i {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .table-view {
+                table.table {
+                    border-color: $gray-100;
+                    tr {
+                        color: $white;
+                    }
+                }
+            }
+
+            .cart-subtotal {
+                background-color: $gray-700;
+            }
+
+            .cart-place-btn {
+                background: $gray-700;
+                border-color: $gray-400;
+                color: $white;
+
+                &.active {
+                    background: $primary-800;
+                    border: 1px solid $primary-800;
+                }
+            }
+
+            .input-dark-mode{
+                background-color: #434343 !important;
+                color: #fff !important;
+            }
+
+
+            .order-status{
+                color: #fff !important;
+            }
+
+
+            .select2-container--default.select2-container--focus .select2-selection--multiple {
+                border: solid black 1px;
+                outline: 0;
+                background-color: #434343 !important;
+            }
+
+            //#select2-food_addons-5l-container-choice-7j4m-2 {
+            //    color: green !important;
+            //}
+
+            .select2-selection__choice__display {
+                color: #fff;
+                background: #ED7402;
+            }
+
+
+        }
+    }
+
+    .misc-item {
+        background: $gray-700;
+        border-color: $gray-600;
+        color: $primary-100;
+        span {
+            color: $white;
+        }
+    }
+}
+
+// Responsive classes
+@include media-breakpoint-up(xl) {
+    .pos-cart-wrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        width: 30.333333%;
+        background: $white;
+        // margin-top: -100px !important;
+        // height: 100%;
+        // .cart-subtotal {
+        //     margin-top: 200px !important;
+        // }
+
+        .card-body {
+            .cart-place-btn {
+                padding: 15px 0;
+            }
+        }
+    }
+}
+@media (min-width: 1821px) {
+    .cart-card {
+        .card-body {
+            .cart-place-btn {
+                padding: 20px 0;
+            }
+        }
+    }
+}

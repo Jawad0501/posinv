@@ -1,0 +1,32 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+@import './custom/variables';
+
+@import './custom/components/functions';
+@import './custom/components/helper';
+@import './custom/components/select2';
+@import './custom/components/slick';
+@import './custom/components/datatable';
+@import './custom/components/swal';
+@import './custom/components/toast';
+@import './custom/components/flatpickr-calendar';
+@import './custom/components/summernote';
+@import './custom/components/scrollbar';
+@import './custom/components/switcher';
+@import './custom/components/page-content';
+@import './custom/components/wrapper';
+@import './custom/components/preloader';
+@import './custom/components/tab-link';
+
+@import './custom/structure/header';
+@import './custom/structure/aside';
+@import './custom/structure/guest-header';
+
+@import './custom/sections/dashboard';
+@import './custom/sections/kitchen';
+@import './custom/sections/pos-cart';
+@import './custom/sections/pos-product';
+
+@import "bootstrap/scss/bootstrap";

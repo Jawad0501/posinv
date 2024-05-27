@@ -1,0 +1,11 @@
+@import '../assets/backend/plugins/icofont/icofont.min.css';
+@import '../assets/backend/plugins/toastr/toastr.min.css';
+@import '../assets/backend/plugins/sweetalerts/sweetalert.css';
+@import '../assets/backend/plugins/select2/dist/css/select2.min.css';
+@import '../assets/backend/plugins/flatpickr/flatpickr.min.css';
+@import '../assets/backend/plugins/OwlCarousel/dist/assets/owl.carousel.min.css';
+@import '../assets/backend/plugins/OwlCarousel/dist/assets/owl.theme.default.min.css';
+@import '../assets/backend/plugins/clockpicker/dist/bootstrap-clockpicker.css';
+@import '../../node_modules/perfect-scrollbar/css/perfect-scrollbar.css';
+@import '../assets/backend/plugins/metismenu/css/metisMenu.min.css';
+@import '../assets/backend/plugins/simplebar/css/simplebar.css';

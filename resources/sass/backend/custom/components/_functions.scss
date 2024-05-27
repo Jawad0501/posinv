@@ -1,0 +1,60 @@
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content}
+    &:-moz-placeholder           {@content}
+    &::-moz-placeholder          {@content}
+    &:-ms-input-placeholder      {@content}  
+}
+
+@mixin scrollbar($horizontal: true) {
+    &::-webkit-scrollbar {
+        @if $horizontal {
+			width: 5px;
+		}
+		@else {
+			height: 5px;
+		}
+    }
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+     
+    &::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+    }
+}
+
+@mixin asidebar {
+    width: 230px;
+    left: 0 !important;
+	.logo-details {
+		.logo_name {
+			transition-delay: 0s;
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+	.nav-links {
+		overflow: visible;
+		li {
+			a {
+				.link_name {
+					pointer-events: none;
+				}
+			}
+			.sub-menu {
+				display: none;
+				pointer-events: none;
+				transition: 0.5s;
+				.link_name {
+					font-size: 18px;
+					opacity: 1;
+					display: block;
+				}
+			}
+            .link-icon {
+				min-width: 78px !important;
+			}
+		}
+		
+	}
+}

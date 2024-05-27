@@ -1,0 +1,327 @@
+.wrapper {
+	width: 100%;
+	position: relative;
+
+	.sidebar-wrapper {
+		width: 250px;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		background: $white;
+		border-right: 0 solid #e4e4e4;
+		z-index: 11;
+		box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%)!important;
+		transition: all .2s ease-out;
+
+		.sidebar-header {
+			width: 250px;
+			height: 60px;
+			display: flex;
+			align-items: center;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			padding: 0 15px;
+			z-index: 5;
+			background: #fff;
+			background-clip: padding-box;
+			border-bottom: 1px solid #e4e4e4;
+			.logo-icon {
+				width: 45px;
+			}
+			.logo-text {
+				font-size: 14px;
+				margin-left: 10px;
+				margin-bottom: 0;
+				letter-spacing: 1px;
+				color: $gray-800;
+				font-weight: $font-weight-bold;
+			}
+			.toggle-icon {
+				font-size: 22px;
+				cursor: pointer;
+				color: $gray-800;
+			}
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			background: 0 0;
+			border: 1px solid #ededed;
+			background: #fff;
+
+			&.metismenu {
+				background: 0 0;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				padding: 10px;
+				margin-top: 60px;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: column;
+				flex-direction: column;
+
+				li+li {
+					margin-top: 5px;
+				}
+
+				&>li {
+					display: -webkit-box;
+					display: -ms-flexbox;
+					display: flex;
+					-webkit-box-orient: vertical;
+					-webkit-box-direction: normal;
+					-ms-flex-direction: column;
+					flex-direction: column;
+					position: relative
+				}
+				a {
+					font-family: $fontSecondary;
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: left;
+					padding: 8px 15px;
+					font-size: 14px;
+					color: $black;
+					outline-width: 0;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					letter-spacing: .5px;
+					border: 1px solid #ffffff00;
+					transition: all .3s ease-out;
+					path {
+						fill: $black;
+					}
+
+					.parent-icon {
+						font-size: 24px;
+						line-height: 1;
+					}
+					.menu-title {
+						margin-left: 10px
+					}
+				}
+				ul {
+					&:first-child {
+						margin-top: 5px
+					}
+					&:last-child {
+						margin-top: 5px
+					}
+					ul {
+						a {
+							padding: 8px 15px 8px 30px
+						}
+						ul {
+							a {
+								padding: 8px 15px 8px 45px
+							}
+						}
+					}
+				}
+
+				:is(.mm-active>a, a:active, a:focus, a:hover)  {
+					color: $primary-800;
+					text-decoration: none;
+					background: $primary-50;
+					path {
+						fill: $primary-800;
+					}
+				}
+				.has-arrow {
+					&:after {
+						position: absolute;
+						content: "";
+						width: .5em;
+						height: .5em;
+						border-style: solid;
+						border-width: 1.2px 0 0 1.2px;
+						border-color: initial;
+						right: 15px;
+						transform: rotate(-45deg) translateY(-50%);
+						transform-origin: top;
+						top: 50%;
+						transition: all .3s ease-out;
+					}
+					&[aria-expanded=true]:after,
+					.mm-active>.has-arrow:after {
+						transform: rotate(-135deg) translateY(-50%);
+					}
+				}
+			}
+
+			a {
+				padding: 6px 15px 6px 15px;
+				font-size: 15px;
+				border: 0;
+				i {
+					margin-right: 10px;
+                    font-size: 10px;
+				}
+			}
+		}
+	}
+
+
+	&.toggled {
+		:is(.topbar, .main-content) {
+			left: 70px
+		}
+	}
+
+}
+
+.menu-label {
+	padding: 20px 15px 5px 5px;
+	color: #b0afaf;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: .5px
+}
+
+@media screen and (min-width:1025px) {
+	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .sidebar-header .logo-text {
+		display: none
+	}
+	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper {
+		width: 70px
+	}
+	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .sidebar-header {
+		width: 70px
+	}
+	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .sidebar-header .toggle-icon {
+		display: none
+	}
+	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .sidebar-header {
+		justify-content: center
+	}
+	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .sidebar-header {
+		width: 70px
+	}
+	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .metismenu a {
+		justify-content: center
+	}
+	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .metismenu .menu-title {
+		display: none
+	}
+	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .metismenu li ul {
+		display: none
+	}
+	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .metismenu li.menu-label {
+		display: none
+	}
+	.wrapper.toggled:not(.sidebar-hovered) .sidebar-wrapper .metismenu .has-arrow:after {
+		display: none
+	}
+}
+
+
+@media screen and (max-width:1024px) {
+	.topbar {
+		left: 0 !important;
+	}
+	.mobile-search-icon {
+		display: block !important;
+	}
+	.mobile-toggle-menu {
+		display: block !important;
+	}
+	.sidebar-wrapper {
+		left: -300px !important;
+		box-shadow: none;
+	}
+
+	.page-wrapper {
+		margin-left: 0 !important;
+	}
+	.page-footer {
+		left: 0;
+	}
+	.search-bar {
+		display: none;
+	}
+	.full-search-bar {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		z-index: 100;
+		background: #ffffff;
+		height: 60px;
+		padding: 0 1.4rem;
+	}
+	.search-bar-box {
+		width: 100% !important;
+	}
+	.search-close {
+		display: block !important;
+	}
+	.search-show {
+		left: 15px;
+		right: auto;
+	}
+	.wrapper.toggled .sidebar-wrapper {
+		left: 0 !important;
+	}
+	.wrapper.toggled .page-wrapper {
+		margin-left: 0
+	}
+	.wrapper.toggled .overlay {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #000;
+		opacity: .6;
+		z-index: 10;
+		display: block;
+		cursor: move;
+		transition: all .2s ease-out;
+	}
+}
+
+.dark {
+    .sidebar-wrapper {
+        background: $gray-800;
+        border-right: 1px solid rgb(255 255 255 / 12%);
+        box-shadow: 0 0.1rem 0.7rem rgb(0 0 0 / 20%) !important;
+
+        .sidebar-header {
+			background: $gray-700;
+            border-bottom: 1px solid $gray-600;
+            :is(.logo-text, .toggle-icon) {
+				color: $white;
+			}
+		}
+
+		ul {
+			border: 1px solid #ffffff00;
+            background: rgb(255 255 255 / 8%);
+
+			&.metismenu {
+				a {
+					color: $white;
+                    path {
+                        fill: $white;
+                    }
+				}
+
+				:is(.mm-active>a, a:active, a:focus, a:hover)  {
+					color: $white;
+					background: rgb(255 255 255 / 18%);
+                    path {
+                        fill: $white;
+                    }
+				}
+			}
+		}
+    }
+}

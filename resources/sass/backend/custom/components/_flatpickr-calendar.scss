@@ -1,0 +1,56 @@
+.dark {
+    .flatpickr-calendar {
+        background-color: $gray-800;
+        border-color: $gray-700;
+
+        .flatpickr-months {
+            .flatpickr-prev-month,
+            .flatpickr-next-month {
+                svg {
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+
+            .flatpickr-month {
+                .flatpickr-current-month {
+                    .flatpickr-monthDropdown-months {
+                        background-color: $gray-700;
+                        border-color: $gray-800;
+                        color: $white;
+                    }
+                    .numInputWrapper {
+                        .numInput {
+                            color: $white;
+                        }
+
+                        span {
+                            border-color: $gray-700;
+                        }
+                    }
+                }
+            }
+        }
+        span.flatpickr-weekday {
+            color: $white;
+        }
+        .flatpickr-day {
+            color: $white;
+            &.prevMonthDay {
+                color: $gray-500;
+            }
+            &.today {
+                border-color: $primary-700;
+            }
+            &.selected {
+                background-color: $primary-700;
+                border-color: $primary-700;
+            }
+            &:hover {
+                background-color: $gray-700;
+                border-color: $gray-700;
+            }
+        }
+    }
+}

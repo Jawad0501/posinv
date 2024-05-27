@@ -1,0 +1,106 @@
+@mixin separate_card($color, $bg) {
+    .dash_inner {
+        .count {
+            color: $color;
+        }
+    }
+    .icon {
+        background: $bg;
+    }
+}
+
+.dash_card {
+    border: none;
+    box-shadow: $box-shadow-sm;
+    border-radius: 20px;
+    background-color: $white;
+    padding: 16px 24px;
+    .dash_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .dash_des {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .des_title {
+                font-size: $h6-font-size;
+                font-weight: $font-weight-bolder;
+                margin-bottom: 0;
+            }
+            .des_sub_title {
+                font-size: 16px;
+                font-family: $fontSecondary;
+                margin-bottom: 0;
+            }
+        }
+        .count {
+            font-weight: $font-weight-bolder;
+        }
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+    }
+
+    &.dash_info_card {
+        @include separate_card($info-800, $info-50)
+    }
+    &.dash_success_card {
+        @include separate_card($success-800, $success-50)
+    }
+    &.dash_warning_card {
+        @include separate_card($warning-800, $warning-50)
+    }
+}
+
+.dash_table {
+    background-color: $white;
+    box-shadow: $box-shadow-sm;
+    border-radius: 10px;
+    padding: 32px;
+}
+
+.dash_graph_card {
+    border-radius: 10px !important;
+    box-shadow: $box-shadow-sm;
+    border: none !important;
+    .chart-container-0 {
+        position: relative;
+        height: 320px;
+    }
+    .chart-container-1 {
+        position: relative;
+        height: 260px;
+    }
+    .chart-container-2 {
+        position: relative;
+        height: 220px;
+    }
+}
+
+// Dark classes
+.dark {
+    .dash_card {
+        background-color: $gray-800;
+    }
+
+    .dash_table {
+        background-color: $gray-700;
+    }
+
+    .dash_graph_card {
+        background-color: $gray-800;
+
+        .list-group-item {
+            color: $white;
+            border-color: $gray-700;
+        }
+    }
+}
